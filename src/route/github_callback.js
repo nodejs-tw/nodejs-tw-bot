@@ -27,7 +27,7 @@ module.exports = async (ctx) => {
     }
   }
 
-  let res = await linebot.push('C07423688a7898fc26a773e05f80f6517', message)
+  let res = await linebot.push(process.env.LINE_GROUP_ID, message)
   console.log('res', res)
 
   ctx.body = res
