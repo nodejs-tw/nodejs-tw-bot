@@ -14,6 +14,7 @@
     "linebot-koa-middleware": "0.0.1"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0",
     "standard": "^10.0.3"
   },
   "scripts": {
@@ -23,5 +24,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
