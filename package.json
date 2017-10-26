@@ -1,6 +1,6 @@
 {
   "name": "nodejs-tw-bot",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "description": "nodejs-tw-bot",
   "main": "src/app.js",
   "dependencies": {
@@ -15,12 +15,14 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "standard-version": "^4.2.0"
   },
   "scripts": {
     "start": "node src/app.js",
     "lint": "standard 'src/**/*.js' 'test/**/*.js'",
     "lint:fix": "npm run lint -- --fix",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
