@@ -18,14 +18,16 @@ bot.on('message', async function (event) {
     let replyMsg = `Got: ${msg}`
 
     console.log('profile', await event.source.profile())
+    console.log('replyMsg', replyMsg)
 
-    event.reply(replyMsg).then(function (data) {
-      console.log(replyMsg)
-    }).catch(function (error) {
-      if (error) {
-        console.log('error')
-      }
-    })
+    // 先拔掉這個功能避免在群組太吵
+    // event.reply(replyMsg).then(function (data) {
+    //   console.log(replyMsg)
+    // }).catch(function (error) {
+    //   if (error) {
+    //     console.log('error')
+    //   }
+    // })
   }
 })
 
