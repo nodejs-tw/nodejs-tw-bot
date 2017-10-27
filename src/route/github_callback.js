@@ -4,10 +4,13 @@ module.exports = async (ctx) => {
   console.log('ctx', ctx)
   console.log('ctx', ctx.request.body)
 
-  if (ctx.request.header['X-GitHub-Event'] === 'issues') {
-    console.log('action', ctx.request.body.action)
-    console.log('issues', ctx.request.body.issue)
+  if (ctx.request.header['X-GitHub-Event'] !== 'issues' || ctx.request.body.action !== 'opened') {
+    ctx.body = 'pass'
+    return 
   }
+
+  console.log('action', ctx.request.body.action)
+  console.log('issues', ctx.request.body.issue)
 
   let message = {
     'type': 'template',
