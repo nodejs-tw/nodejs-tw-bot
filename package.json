@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "dependencies": {
     "dotenv": "^4.0.0",
+    "fbgraph": "^1.4.1",
     "file-type": "^7.0.1",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",

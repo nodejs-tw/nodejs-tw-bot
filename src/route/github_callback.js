@@ -1,13 +1,24 @@
 const linebot = require('../service/linebot')
+const facebook = require('../service/facebook/facebook')
 
 module.exports = async (ctx) => {
-  console.log('ctx', ctx)
-  console.log('ctx', ctx.request.body)
+  // console.log('ctx', ctx)
+  console.log('ctx.request.body', ctx.request.body)
 
   if (ctx.request.header['X-GitHub-Event'] === 'issues') {
     console.log('action', ctx.request.body.action)
     console.log('issues', ctx.request.body.issue)
   }
+
+  let issue_info = {
+    title: ctx.request.body.issue.title,
+    desc: ctx.request.body.issue.body,
+    username: ctx.request.body.sender.login,
+    avatar: ctx.request.body.sender.avatar_url,
+    url: ctx.request.body.issue.html_url,
+  }
+
+  facebook.pushFeed(issue_info);
 
   let message = {
     'type': 'template',
