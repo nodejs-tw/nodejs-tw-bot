@@ -13,5 +13,5 @@ app.listen(9009)
 
 // 事件處理
 require('./service/eventEmitter')
-require('./service/github')
-require('./service/line')
+require('./service/github/handler')
+require('./service/line/handler')

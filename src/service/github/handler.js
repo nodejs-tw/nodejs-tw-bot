@@ -1,4 +1,4 @@
-const eventEmitter = require('../service/eventEmitter')
+const eventEmitter = require('../eventEmitter')
 
 eventEmitter.on('github:issue:opened', (payload) => {
   let message = {
