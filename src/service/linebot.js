@@ -5,7 +5,7 @@ const fileType = require('file-type')
 let bot = linebot({
   channelId: process.env.LINT_CHANNEL_ID,
   channelSecret: process.env.LINT_CHANNEL_SECRET,
-  channelAccessToken: process.env.LINT_CHANNEL_TOKEN,
+  channelAccessToken: process.env.LINT_CHANNEL_TOKEN
 })
 
 bot.on('message', async function (event) {
