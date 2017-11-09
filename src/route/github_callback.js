@@ -35,5 +35,5 @@ module.exports = async (ctx) => {
   // let res = await linebot.push(process.env.LINE_GROUP_ID, message)
   // console.log('res', res)
 
-  ctx.body = res
+  ctx.body = {success: true}
 }
