@@ -6,6 +6,6 @@ module.exports = async (ctx) => {
 
   let titile = ctx.request.body.title
   let link = ctx.request.body.link
-  
-  ctx.body = {}  
+
+  ctx.body = {}
 }

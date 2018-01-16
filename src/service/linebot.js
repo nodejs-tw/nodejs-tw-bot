@@ -1,4 +1,5 @@
 require('dotenv').config()
+const log = require('../utils/log')('ntb:service:linebot')
 const linebot = require('linebot')
 const fileType = require('file-type')
 
@@ -9,16 +10,12 @@ let bot = linebot({
 })
 
 bot.on('message', async function (event) {
-  console.log(event)
-  console.log(await event.message.content())
-  console.log(fileType(await event.message.content()))
+  log.debug('event %j', event)
 
   if (event.message.type === 'text') {
-    let msg = event.message.text
-    let replyMsg = `Got: ${msg}`
+    log.debug('profile %j', await event.source.profile())
 
-    console.log('profile', await event.source.profile())
-    console.log('replyMsg', replyMsg)
+    let msg = event.message.text
 
     if (msg === '/give_me_id') {
       let groupId = event.source.groupId

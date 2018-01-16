@@ -1,13 +1,13 @@
+const log = require('../utils/log')('ntb:route:github_callback')
 const linebot = require('../service/linebot')
 const eventEmitter = require('../service/eventEmitter')
 
 module.exports = async (ctx) => {
-  console.log('ctx', ctx)
-  console.log('ctx', ctx.request.body)
+  log.debug('ctx %j', ctx.request.body)
 
   if (ctx.request.header['X-GitHub-Event'] === 'issues' || ctx.request.body.action === 'opened') {
-    console.log('action', ctx.request.body.action)
-    console.log('issues', ctx.request.body.issue)
+    log.debug('action %j', ctx.request.body.action)
+    log.debug('issues %j', ctx.request.body.issue)
     eventEmitter.emit('github:issue:opened', ctx.request.body)
   }
 
