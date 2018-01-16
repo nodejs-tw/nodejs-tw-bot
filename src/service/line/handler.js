@@ -1,4 +1,4 @@
-const log = require('../utils/log')('ntb:service:line:handler')
+const log = require('../../utils/log')('ntb:service:line:handler')
 const eventEmitter = require('../eventEmitter')
 const linebot = require('../linebot')
 
