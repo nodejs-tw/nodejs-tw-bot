@@ -15,3 +15,6 @@ app.listen(9009)
 require('./service/eventEmitter')
 require('./service/github/handler')
 require('./service/line/handler')
+
+// schedule
+require('./jobs/kernel')
