@@ -21,7 +21,7 @@
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
     "standard": "^10.0.3",
-    "standard-version": "^4.2.0"
+    "standard-version": "^8.0.1"
   },
   "scripts": {
     "start": "node src/app.js",
