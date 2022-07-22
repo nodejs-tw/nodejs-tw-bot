@@ -6,7 +6,7 @@
   "dependencies": {
     "debug": "^3.1.0",
     "dotenv": "^4.0.0",
-    "file-type": "^7.0.1",
+    "file-type": "^16.5.4",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.1.0",
